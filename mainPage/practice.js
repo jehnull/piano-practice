@@ -4,6 +4,7 @@ if (navigator.requestMIDIAccess) {
 }
 else {
     const noMIDIBrowser = document.getElementById('noMIDIBrowser');
+    document.getElementById("noBrowser").innerHTML = "AYYY";
     noMIDIBrowser.classList.remove('d-none');
 }
 
