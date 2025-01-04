@@ -2,11 +2,6 @@
 if (navigator.requestMIDIAccess) {
     navigator.requestMIDIAccess().then(MIDIsuccess, MIDIfail);
 }
-else {
-    const noMIDIBrowsers = document.getElementById('noMIDIBrowser');
-    document.getElementById("noBrowser").innerHTML = "AYYY";
-    noMIDIBrowsers.classList.remove('d-none');
-}
 
 //if requestMIDIAccess returns success
 function MIDIsuccess(midiAccess) {
