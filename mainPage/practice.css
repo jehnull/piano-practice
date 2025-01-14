@@ -1,0 +1,15 @@
+a img{
+    transition: transform .2s ease-in-out;
+}
+  
+a:hover img {
+    transform: scale(1.2);
+}
+
+.menuTitle {
+    transition: transform 0.7s ease-in-out;
+}
+
+.menuTitle:hover {
+    transform: rotate(360deg) scale(0.01);
+ }
