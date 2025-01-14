@@ -1,0 +1,11 @@
+.home img{
+    transition: transform .2s ease-in-out;
+}
+  
+.home:hover img {
+    transform: scale(1.2);
+}
+
+.btn-check {
+    background-color: brown;
+}
