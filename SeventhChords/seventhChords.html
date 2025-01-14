@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>⚪ 7th CHORDS PRACTICE</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+
+<body>
+  <script src="https://cdn.jsdelivr.net/npm/tonal/browser/tonal.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <script src="seventhChords.js"></script>
+
+  <div class="position-absolute m-3">
+    <a href="../index.html"> <- Home </a>
+  </div>
+
+
+  <!-- Settings -->
+  <div class="position-fixed top-0 end-0 m-3 z-2">
+    <div class="d-flex flex-column align-items-end">
+      <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#floatingCollapse"
+        aria-expanded="false" aria-controls="floatingCollapse">
+        ⚙
+      </button>
+
+      <div class="collapse mt-2" id="floatingCollapse">
+        <div class="card card-body">
+          <div>
+            <h3> 7th Chord Type :</h3>
+            <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
+              <div>
+                <input type="checkbox" class="btn-check" name="sevChord" value="maj7" id="major7Type"
+                  autocomplete="off" checked>
+                <label class="btn btn-outline-primary" for="major7Type">Maj7</label>
+
+                <input type="checkbox" class="btn-check" name="sevChord" value="min7" id="minor7Type"
+                  autocomplete="off" checked>
+                <label class="btn btn-outline-primary" for="minor7Type">Min7</label>
+
+                <input type="checkbox" class="btn-check" name="sevChord" value="7" id="dom7Type"
+                  autocomplete="off">
+                <label class="btn btn-outline-primary" for="dom7Type">7</label>
+
+                <input type="checkbox" class="btn-check" name="sevChord" value="dim7" id="dim7Type"
+                  autocomplete="off">
+                <label class="btn btn-outline-primary" for="dim7Type">Dim7</label>
+
+                <input type="checkbox" class="btn-check" name="sevChord" value="m7b5" id="halfDim7"
+                  autocomplete="off">
+                <label class="btn btn-outline-primary" for="halfDim7">m7b5</label>
+              </div>
+            </div>
+          </div>
+          <p></p>
+          <div>
+            <h3> Root Note :</h3>
+            <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
+              <div>
+                <input type="checkbox" class="btn-check" name="key" value="C" id="keyC" autocomplete="off" checked>
+                <label class="btn btn-outline-primary" for="keyC">C</label>
+
+                <input type="checkbox" class="btn-check" name="key" value="Db" id="keyDFlat" autocomplete="off">
+                <label class="btn btn-outline-primary" for="keyDFlat">Db</label>
+
+                <input type="checkbox" class="btn-check" name="key" value="D" id="keyD" autocomplete="off" checked>
+                <label class="btn btn-outline-primary" for="keyD">D</label>
+
+                <input type="checkbox" class="btn-check" name="key" value="Eb" id="keyEFlat" autocomplete="off">
+                <label class="btn btn-outline-primary" for="keyEFlat">Eb</label>
+
+                <input type="checkbox" class="btn-check" name="key" value="E" id="keyE" autocomplete="off" checked>
+                <label class="btn btn-outline-primary" for="keyE">E</label>
+
+                <input type="checkbox" class="btn-check" name="key" value="F" id="keyF" autocomplete="off" checked>
+                <label class="btn btn-outline-primary" for="keyF">F</label>
+
+                <input type="checkbox" class="btn-check" name="key" value="Gb" id="keyGFlat" autocomplete="off">
+                <label class="btn btn-outline-primary" for="keyGFlat">Gb</label>
+
+                <input type="checkbox" class="btn-check" name="key" value="G" id="keyG" autocomplete="off" checked>
+                <label class="btn btn-outline-primary" for="keyG">G</label>
+
+                <input type="checkbox" class="btn-check" name="key" value="Ab" id="keyAFlat" autocomplete="off">
+                <label class="btn btn-outline-primary" for="keyAFlat">Ab</label>
+
+                <input type="checkbox" class="btn-check" name="key" value="A" id="keyA" autocomplete="off" checked>
+                <label class="btn btn-outline-primary" for="keyA">A</label>
+
+                <input type="checkbox" class="btn-check" name="key" value="Bb" id="keyBFlat" autocomplete="off">
+                <label class="btn btn-outline-primary" for="keyBFlat">Bb</label>
+
+                <input type="checkbox" class="btn-check" name="key" value="B" id="keyB" autocomplete="off" checked>
+                <label class="btn btn-outline-primary" for="keyB">B</label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="d-flex justify-content-center align-items-center vh-100">
+    <div class="text-center">
+      <h1> 7th Chords test :^) </h1>
+      <p class="fw-light">Play the correct 7th chord on your piano keyboard</p>
+      <hr>
+      <p id="level"> # 1 </p>
+      <div class="card">
+        <div class="card-body">
+      <p id="sevChord-display" class="fs-1"> CMaj7 </p>
+        </div>
+        <p id="message"> Play CMaj7 [C,E,G,B] to begin! </p>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
