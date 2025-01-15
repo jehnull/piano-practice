@@ -12,6 +12,19 @@ console.log(Tonal.Chord.getChord("7", "C").symbol)
 console.log(Tonal.Chord.getChord("dim7", "C").symbol)
 console.log(Tonal.Chord.getChord("m7b5", "C").symbol)
 
+// more chords to add in future !!!
+console.log(Tonal.Chord.getChord("7#5", "C").symbol)
+console.log(Tonal.Chord.getChord("sus2", "C").symbol)
+console.log(Tonal.Chord.getChord("sus4", "C").symbol)
+console.log(Tonal.Chord.getChord("M6", "C").symbol)
+console.log(Tonal.Chord.getChord("6", "C").notes)
+console.log(Tonal.Chord.getChord("9", "C").symbol)
+console.log(Tonal.Chord.getChord("m9", "C").symbol)
+console.log(Tonal.Chord.getChord("11", "C").notes)
+console.log(Tonal.Chord.getChord("m11", "C").symbol)
+console.log(Tonal.Chord.getChord("13", "C").symbol)
+console.log(Tonal.Chord.getChord("m13", "C").symbol)
+
 let pushedNotesList = [];
 let sevChord = Tonal.Chord.notes("maj7", "C")
 let numOfLvls = 1;
@@ -34,10 +47,11 @@ function start7thChordsGame(input) {
             if (velocity > 0) {
                 noteOn(note, messageDisplay);
                 convertEnharmonic(sevChord)
-
-                if (removeOctaveNums(pushedNotesList).sort().toString() === sevChord.sort().toString()) {
+                const sortedSevChord = [...sevChord].sort().toString();
+                if (removeOctaveNums(pushedNotesList).sort().toString() === sortedSevChord) {
                     //console.log("CORRECT")
                     if (!correct7thChordPressed) {
+                        convertEnharmonic(sevChord)
                         messageDisplay.textContent = "✅ CORRECT : " + sevChord;
                         sevChordDisplay.classList.add("text-success");
                         numOfLvls++;
