@@ -86,7 +86,7 @@ function runNew7thChord(randomRoot, random7thChord, sevChordDisplay, levelDispla
 // had issues with 'bb' '#' and 'Cb' not getting read correctly from MIDI input
 function convertEnharmonic(notes) {
     notes.forEach((element, index, array) => {
-        if (element.includes("bb") || element.includes("#") || element.includes("Cb")) {
+        if (element.includes("bb") || element.includes("#") || element.includes("Cb") || element.includes("Fb")) {
             array[index] = Tonal.Note.enharmonic(element);
         }
     });

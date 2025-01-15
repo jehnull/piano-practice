@@ -19,14 +19,14 @@
 
   <!-- Back to Home Button-->
   <div class="position-absolute m-3">
-    <a href="../index.html"> <- Home </a>
+    <a href="../index.html"> <img src="../Assets/home.png" alt="Notes" width="60" height="50"> </a>
   </div>
 
   <!-- Settings -->
   <div class="position-fixed top-0 end-0 m-3 z-2">
     <div class="d-flex flex-column align-items-end">
-      <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#floatingCollapse"
-        aria-expanded="false" aria-controls="floatingCollapse">
+      <button class="btn btn-outline-secondary" type="button" data-bs-toggle="collapse"
+        data-bs-target="#floatingCollapse" aria-expanded="false" aria-controls="floatingCollapse">
         ⚙
       </button>
 
@@ -35,21 +35,23 @@
           <div>
             <h3> Scale Type :</h3>
             <div class="btn-group" role="group" aria-label="Basic radio toggle button group" id="scaleTypeButtons">
-              <input type="radio" class="btn-check" name="btnradio" value="Major" id="scaleTypeMajor" autocomplete="off"
-                checked>
-              <label class="btn btn-outline-primary" for="scaleTypeMajor">Major</label>
+              <div>
+                <input type="radio" class="btn-check" name="btnradio" value="Major" id="scaleTypeMajor"
+                  autocomplete="off" checked>
+                <label class="btn btn btn-outline-success" for="scaleTypeMajor">Major</label>
 
-              <input type="radio" class="btn-check" name="btnradio" value="natural" id="scaleTypeNatMinor"
-                autocomplete="off" >
-              <label class="btn btn-outline-primary" for="scaleTypeNatMinor">Natural Minor</label>
+                <input type="radio" class="btn-check" name="btnradio" value="natural" id="scaleTypeNatMinor"
+                  autocomplete="off">
+                <label class="btn btn-outline-success" for="scaleTypeNatMinor">Natural Minor</label>
 
-              <input type="radio" class="btn-check" name="btnradio" value="harmonic" id="scaleTypeHarMinor"
-                autocomplete="off" >
-              <label class="btn btn-outline-primary" for="scaleTypeHarMinor">Harmonic Minor</label>
+                <input type="radio" class="btn-check" name="btnradio" value="harmonic" id="scaleTypeHarMinor"
+                  autocomplete="off">
+                <label class="btn btn-outline-success" for="scaleTypeHarMinor">Harmonic Minor</label>
 
-              <input type="radio" class="btn-check" name="btnradio" value="melodic" id="scaleTypeMelMinor"
-                autocomplete="off" >
-              <label class="btn btn-outline-primary" for="scaleTypeMelMinor">Melodic Minor</label>
+                <input type="radio" class="btn-check" name="btnradio" value="melodic" id="scaleTypeMelMinor"
+                  autocomplete="off">
+                <label class="btn btn-outline-success" for="scaleTypeMelMinor">Melodic Minor</label>
+              </div>
             </div>
           </div>
           <p></p>
@@ -58,43 +60,40 @@
             <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
               <div>
                 <input type="checkbox" class="btn-check" name="key" value="C" id="keyC" autocomplete="off" checked>
-                <label class="btn btn-outline-primary" for="keyC">C</label>
+                <label class="btn btn-outline-success" for="keyC">C</label>
 
                 <input type="checkbox" class="btn-check" name="key" value="Db" id="keyDFlat" autocomplete="off">
-                <label class="btn btn-outline-primary" for="keyDFlat">C#/Db</label>
+                <label class="btn btn-outline-success" for="keyDFlat">C#/Db</label>
 
                 <input type="checkbox" class="btn-check" name="key" value="D" id="keyD" autocomplete="off" checked>
-                <label class="btn btn-outline-primary" for="keyD">D</label>
-              </div>
-              <div>
+                <label class="btn btn-outline-success" for="keyD">D</label>
+
                 <input type="checkbox" class="btn-check" name="key" value="Eb" id="keyEFlat" autocomplete="off">
-                <label class="btn btn-outline-primary" for="keyEFlat">D#/Eb</label>
+                <label class="btn btn-outline-success" for="keyEFlat">D#/Eb</label>
 
                 <input type="checkbox" class="btn-check" name="key" value="E" id="keyE" autocomplete="off" checked>
-                <label class="btn btn-outline-primary" for="keyE">E</label>
+                <label class="btn btn-outline-success" for="keyE">E</label>
 
                 <input type="checkbox" class="btn-check" name="key" value="F" id="keyF" autocomplete="off" checked>
-                <label class="btn btn-outline-primary" for="keyF">F</label>
-              </div>
-              <div>
+                <label class="btn btn-outline-success" for="keyF">F</label>
+
                 <input type="checkbox" class="btn-check" name="key" value="Gb" id="keyGFlat" autocomplete="off">
-                <label class="btn btn-outline-primary" for="keyGFlat">F#/Gb</label>
+                <label class="btn btn-outline-success" for="keyGFlat">F#/Gb</label>
 
                 <input type="checkbox" class="btn-check" name="key" value="G" id="keyG" autocomplete="off" checked>
-                <label class="btn btn-outline-primary" for="keyG">G</label>
+                <label class="btn btn-outline-success" for="keyG">G</label>
 
                 <input type="checkbox" class="btn-check" name="key" value="Ab" id="keyAFlat" autocomplete="off">
-                <label class="btn btn-outline-primary" for="keyAFlat">G#/Ab</label>
-              </div>
-              <div>
+                <label class="btn btn-outline-success" for="keyAFlat">G#/Ab</label>
+
                 <input type="checkbox" class="btn-check" name="key" value="A" id="keyA" autocomplete="off" checked>
-                <label class="btn btn-outline-primary" for="keyA">A</label>
+                <label class="btn btn-outline-success" for="keyA">A</label>
 
                 <input type="checkbox" class="btn-check" name="key" value="Bb" id="keyBFlat" autocomplete="off">
-                <label class="btn btn-outline-primary" for="keyBFlat">A#/Bb</label>
+                <label class="btn btn-outline-success" for="keyBFlat">A#/Bb</label>
 
                 <input type="checkbox" class="btn-check" name="key" value="B" id="keyB" autocomplete="off" checked>
-                <label class="btn btn-outline-primary" for="keyB">B</label>
+                <label class="btn btn-outline-success" for="keyB">B</label>
               </div>
             </div>
           </div>
@@ -106,10 +105,8 @@
   <!-- Main Game -->
   <div class="d-flex justify-content-center align-items-center vh-100">
     <div class="text-center">
-      <h1> scales test :o </h1>
-      <p class="fw-light">Play any notes on the piano <b> within </b> the given scale</p>
+      <img src="../Assets/scales.png" alt="Notes" width="400" height="200">
       <hr>
-
       <p id="scale-display" class="fs-1 mb-0"> Get Ready! </p>
       <p id="scale-type-display" class="fs-1 mt-0 mb-5"> ... </p>
 

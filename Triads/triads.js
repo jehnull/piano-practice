@@ -6,6 +6,8 @@
  * root chords only...
 */
 
+console.log(Tonal.Chord.notes("min","Db"))
+
 let pushedNotesList = [];
 let triad = Tonal.Chord.notes("major", "C")
 let numOfLvls = 1;
@@ -80,7 +82,7 @@ function runNewTriad(randomKey, randomTriad, triadDisplay, levelDisplay) {
 // had issues with 'bb' '#' and 'Cb' not getting read correctly from MIDI input
 function convertEnharmonic(notes) {
     notes.forEach((element, index, array) => {
-        if (element.includes("bb") || element.includes("#") || element.includes("Cb")) {
+        if (element.includes("bb") || element.includes("#") || element.includes("Cb") || element.includes("Fb")) {
             array[index] = Tonal.Note.enharmonic(element);
         }
     });
