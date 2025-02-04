@@ -142,7 +142,7 @@ function getRandomKey() {
 // Convert the selected scale's notes to the right enharmonic for matching to user input
 function convertEnharmonic(scale) {
   scale.forEach((element, index, array) => {
-    if (element.includes("bb") || element.includes("#")) {
+    if (element.includes("bb") || element.includes("#")  || element.includes("Cb") || element.includes("Fb")) {
       array[index] = Tonal.Note.enharmonic(element);
     }
   });
