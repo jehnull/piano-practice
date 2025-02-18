@@ -69,6 +69,7 @@ function startScalesGame(input) {
   const note = input.data[1];
   const velocity = input.data[2];
 
+  const gameContainer = document.getElementById("game-container");
   const wrongNotes = document.getElementById("wrong-notes");
   const notesList = document.getElementById("current-notes");
 
@@ -84,12 +85,12 @@ function startScalesGame(input) {
         if (["harmonic", "melodic", "natural"].includes(selectedScaleType)) {
           // minor key
           correctScale = convertEnharmonic(Tonal.Key.minorKey(randomKey)[selectedScaleType].scale);
-          updateNotesList(correctScale, currentNote, wrongNotes, notesList);
+          updateNotesList(correctScale, currentNote, wrongNotes, notesList, gameContainer);
         } 
         else {
           //major
           correctScale = convertEnharmonic(Tonal.Key.majorKey(randomKey).scale);
-          updateNotesList(correctScale, currentNote, wrongNotes, notesList);
+          updateNotesList(correctScale, currentNote, wrongNotes, notesList, gameContainer);
         }
       }
       break;
@@ -99,18 +100,25 @@ function startScalesGame(input) {
 }
 
 // Update the wrong notes list and change color of note based on wrong (red) or right (green)
-function updateNotesList(correctScale, currentNote, wrongNotes, notesList) {
+function updateNotesList(correctScale, currentNote, wrongNotes, notesList, gameContainer) {
   if (correctScale.includes(currentNote)) {
     notesList.classList.remove("text-danger");
     notesList.classList.add("text-success");
+    gameContainer.classList.remove("bg-danger");
+    gameContainer.classList.add("bg-success");
   } 
   else {
     wrongNotesList.push(" " + currentNote);
     wrongNotes.textContent = wrongNotesList;
     notesList.classList.remove("text-success");
     notesList.classList.add("text-danger");
+    gameContainer.classList.remove("bg-success");
+    gameContainer.classList.add("bg-danger");
   }
 }
+
+
+
 
 // Get the user selected scale type
 function getSelectedScaleType() {
